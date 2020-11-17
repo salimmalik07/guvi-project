@@ -1,7 +1,16 @@
 <?php 
 session_start();
-$con =  mysqli_connect ('localhost','root','1234');
-mysqli_select_db ($con,'test');
+//create connection
+$servername = "localhost:3600";
+$username = "root";
+$password = "Salim123456";
+$dbname = "id15418547_test";
+
+//$con =  mysqli_connect ('localhost','root','1234');
+$con = new mysqli($servername, $username, $password);
+// mysqli_select_db ($con,'test');
+mysqli_select_db($con,$dbname);
+
 
 $email = $_POST['email'];
 
