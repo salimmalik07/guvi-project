@@ -18,7 +18,8 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $age = $_POST['age'];
 $password = $_POST['password'];
-$s = "select * from userdata where name ='$name'";
+$s = "select * from userdata where name ='?'";
+$stm->bind_param("s",$name)
 $result = mysqli_query($con,$s);
 $num = mysqli_num_rows($result);
 
